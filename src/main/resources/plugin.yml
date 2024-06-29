@@ -1,0 +1,4 @@
+name: CoopDiscordPlugin
+version: '${project.version}'
+main: me.mrpants98.coopdiscordplugin.CoopDiscordPlugin
+api-version: '1.20'

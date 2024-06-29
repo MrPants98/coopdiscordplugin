@@ -1,0 +1,11 @@
+name: CoopDiscordPlugin
+version: '1.0-SNAPSHOT'
+main: me.mrpants98.coopdiscordplugin.CoopDiscordPlugin
+api-version: '1.20'
+commands:
+  SetDiscord:
+    description: Links a player discord
+    usage: /<command>
+  GetPlayerDetails:
+    description: Returns a player's HypixelPlayer values
+    usage: /<command>

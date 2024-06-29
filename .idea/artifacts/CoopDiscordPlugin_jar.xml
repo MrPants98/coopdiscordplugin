@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="CoopDiscordPlugin:jar">
+    <output-path>$PROJECT_DIR$/../../Plugin Testing Server/plugins</output-path>
+    <root id="archive" name="CoopDiscordPlugin.jar">
+      <element id="module-output" name="CoopDiscordPlugin" />
+    </root>
+  </artifact>
+</component>

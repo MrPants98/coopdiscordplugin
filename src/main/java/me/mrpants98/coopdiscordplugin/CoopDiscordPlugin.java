@@ -3,6 +3,7 @@ package me.mrpants98.coopdiscordplugin;
 import me.mrpants98.coopdiscordplugin.Classes.HypixelPlayer;
 import me.mrpants98.coopdiscordplugin.Commands.AddDiscordUsername;
 import me.mrpants98.coopdiscordplugin.Commands.GetHypixelPlayerDetails;
+import me.mrpants98.coopdiscordplugin.Listeners.OnPlayerJoin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.*;
@@ -22,6 +23,7 @@ public final class CoopDiscordPlugin extends JavaPlugin {
 
         getCommand("SetDiscord").setExecutor(new AddDiscordUsername());
         getCommand("GetPlayerDetails").setExecutor(new GetHypixelPlayerDetails());
+        getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
     }
 
     @Override

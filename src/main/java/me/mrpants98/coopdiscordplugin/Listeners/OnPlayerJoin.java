@@ -23,7 +23,7 @@ public class OnPlayerJoin implements Listener {
         if (CoopDiscordPlugin.instance.coop1.containsKey(uuid))
             return;
 
-        HypixelPlayer hypixelPlayer = new HypixelPlayer(displayName, uuid, "");
+        HypixelPlayer hypixelPlayer = new HypixelPlayer(displayName, uuid,  null);
         CoopDiscordPlugin.instance.coop1.put(uuid, hypixelPlayer);
     }
 

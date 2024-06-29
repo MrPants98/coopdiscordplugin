@@ -20,11 +20,11 @@ public class OnPlayerJoin implements Listener {
         String displayName = p.getDisplayName();
         UUID uuid = p.getUniqueId();
 
-        if (CoopDiscordPlugin.instance.coop1.containsKey(uuid))
+        if (CoopDiscordPlugin.instance.hypixelPlayers.containsKey(uuid))
             return;
 
         HypixelPlayer hypixelPlayer = new HypixelPlayer(displayName, uuid,  null);
-        CoopDiscordPlugin.instance.coop1.put(uuid, hypixelPlayer);
+        CoopDiscordPlugin.instance.hypixelPlayers.put(uuid, hypixelPlayer);
     }
 
 }

@@ -12,8 +12,8 @@ public class GetHypixelPlayerDetails implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
         if (commandSender instanceof Player p) {
-            if (CoopDiscordPlugin.instance.coop1.containsKey(p.getUniqueId())) {
-                HypixelPlayer player = CoopDiscordPlugin.instance.coop1.get(p.getUniqueId());
+            if (CoopDiscordPlugin.instance.hypixelPlayers.containsKey(p.getUniqueId())) {
+                HypixelPlayer player = CoopDiscordPlugin.instance.hypixelPlayers.get(p.getUniqueId());
                 p.sendMessage("Displayname: " + player.username + " UUID: " + player.uuid + " Discord Username: " + player.discordUsername);
             }
             return true;

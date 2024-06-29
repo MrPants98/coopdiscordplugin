@@ -2,6 +2,7 @@ package me.mrpants98.coopdiscordplugin;
 
 import me.mrpants98.coopdiscordplugin.Classes.HypixelPlayer;
 import me.mrpants98.coopdiscordplugin.Commands.AddDiscordUsername;
+import me.mrpants98.coopdiscordplugin.Commands.CoopManaging;
 import me.mrpants98.coopdiscordplugin.Commands.GetHypixelPlayerDetails;
 import me.mrpants98.coopdiscordplugin.Listeners.OnPlayerJoin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,7 +14,8 @@ public final class CoopDiscordPlugin extends JavaPlugin {
 
     public static CoopDiscordPlugin instance;
     //Stand in for the skyblock coop
-    public HashMap<UUID, HypixelPlayer> coop1 = new HashMap<UUID, HypixelPlayer>();
+    public List<HypixelPlayer> coop1 = new ArrayList<HypixelPlayer>();
+    public HashMap<UUID, HypixelPlayer> hypixelPlayers = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -23,6 +25,7 @@ public final class CoopDiscordPlugin extends JavaPlugin {
 
         getCommand("SetDiscord").setExecutor(new AddDiscordUsername());
         getCommand("GetPlayerDetails").setExecutor(new GetHypixelPlayerDetails());
+        getCommand("Coop").setExecutor(new CoopManaging());
         getServer().getPluginManager().registerEvents(new OnPlayerJoin(), this);
     }
 

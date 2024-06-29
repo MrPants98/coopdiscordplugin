@@ -29,10 +29,10 @@ public class AddDiscordUsername implements CommandExecutor {
 
                 HypixelPlayer newPlayer = new HypixelPlayer(playerUsername, uuid, discordUsername);
 
-                if (CoopDiscordPlugin.instance.coop1.containsKey(uuid)) {
-                    CoopDiscordPlugin.instance.coop1.replace(uuid, newPlayer);
+                if (CoopDiscordPlugin.instance.hypixelPlayers.containsKey(uuid)) {
+                    CoopDiscordPlugin.instance.hypixelPlayers.replace(uuid, newPlayer);
                 } else {
-                    CoopDiscordPlugin.instance.coop1.put(uuid, newPlayer);
+                    CoopDiscordPlugin.instance.hypixelPlayers.put(uuid, newPlayer);
                 }
             }
 

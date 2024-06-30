@@ -65,6 +65,8 @@ public class CoopManaging implements CommandExecutor {
     }
 
     private  void ListAllPlayersInCoop(Player player) {
+        player.sendMessage(ChatColor.GREEN + "All Players in Coop:");
+
         for (int i = 0; i < CoopDiscordPlugin.instance.coop1.size(); i++) {
             String displayName = CoopDiscordPlugin.instance.coop1.get(i).username;
 

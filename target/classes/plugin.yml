@@ -9,3 +9,6 @@ commands:
   GetPlayerDetails:
     description: Returns a player's HypixelPlayer values
     usage: /<command>
+  Coop:
+    description: Useful functions for managing a coop
+    usage: /<command>
